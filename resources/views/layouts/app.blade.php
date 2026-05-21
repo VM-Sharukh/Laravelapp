@@ -278,7 +278,7 @@
                 <div class="collapse submenu"
                      id="settingsMenu">
 
-                    <a href="{{ route('users.fetch-user-profile') }}"
+                    <a href="{{ route('profiles.fetch-user-profile') }}"
                        class="nav-link">
 
                         Profile
