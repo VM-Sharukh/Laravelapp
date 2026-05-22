@@ -12,6 +12,7 @@ class ProfileController extends Controller
     public function fetchUserProfile(Request $request){
 
         echo "fetchUserProfile fn";
+        echo "pushing and will revert back";
     }
 
     /**
