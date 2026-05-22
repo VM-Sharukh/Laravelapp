@@ -12,6 +12,14 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         //
+            /*
+                disable csrf to all routes
+                $middleware->validateCsrfTokens(except : ['*']);
+            */
+            // even you can add url below ('update-user-status') and send csrf token, its works fine
+            $middleware->validateCsrfTokens(except : [
+                'update-user-status'
+            ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
