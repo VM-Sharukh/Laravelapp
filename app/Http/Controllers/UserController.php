@@ -245,4 +245,9 @@ class UserController extends Controller
             
         },200,$headers);
     }
+
+    public function fetchUserProfile(Request $request){
+
+    echo "fetchUserProfile fn";
+    }
 }

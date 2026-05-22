@@ -3,8 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\ProfileController;
-
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -27,19 +25,11 @@ Route::middleware('auth')->group(function (){
     Route::get("/download-user-data",[UserController::class,'downloadUserData'])->name('users.download-user-data');
 
     Route::post("/update-user-status",[UserController::class,'updateUserStatus'])->name('users.update-user-status');
-});
 
+    Route::get("/fetch-user-profile",[UserController::class,'fetchUserProfile'])->name('users.fetch-user-profile');
+});
 
 /* End User CRUD Routing */
-
-/* Start Profile CRUD Routing  */
-
-Route::middleware('auth')->group(function (){
-    Route::get("/fetch-user-profile",[ProfileController::class,'fetchUserProfile'])->name('profiles.fetch-user-profile');
-});
-
-
-/* End Profile CRUD Routing  */
 
 /* Start Login Routing */
 
